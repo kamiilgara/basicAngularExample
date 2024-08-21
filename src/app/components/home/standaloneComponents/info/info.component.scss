@@ -1,0 +1,73 @@
+.info-component {
+    background-color: #f5f5f5;
+    padding: 100px 0px;
+    box-shadow: 1px 1px 30px;
+
+    .container {
+        .row {
+            .main {
+                a {
+                    &:hover {
+                        .text {
+                            p {
+                                padding-bottom: 20px;
+                                transition: padding-bottom 1.5s;
+                                -webkit-transition: padding-bottom 1.5s;
+                                -moz-transition: padding-bottom 1.5s;
+                                -ms-transition: padding-bottom 1.5s;
+                                -o-transition: padding-bottom 1.5s;
+                                border-bottom: 3px rgb(146, 146, 146) solid;
+                            }
+                        }
+                    }
+
+                    .img {
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            margin-left: auto;
+                            display: block;
+                            width: 250px;
+                            height: 250px;
+                            object-fit: cover;
+                        }
+
+                    }
+
+                    .text {
+                        padding: 50px 0px;
+
+                        h3 {
+                            text-align: center;
+                            font-weight: bolder;
+                            color: rgb(54, 54, 54);
+                        }
+
+                        p {
+                            padding-bottom: 10px;
+                            color: rgb(54, 54, 54);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    a {
+        .img {
+            img {
+                margin: 0px auto;
+            }
+        }
+
+        .text {
+            p {
+                padding: 0px 20px;
+                text-align: justify;
+            }
+        }
+    }
+}

@@ -1,0 +1,20 @@
+.jobseeker-component {
+    margin-top: 100px;
+    .container {
+        .jobseeker-page {
+            display: flex;
+            .left-info {
+                h2 {
+                    font-weight: bolder;
+                }
+            }
+            .right-pic {
+                img {
+                    margin: 0px auto;
+                    width: 50%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

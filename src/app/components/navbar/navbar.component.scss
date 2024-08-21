@@ -1,0 +1,128 @@
+$main-color: rgb(43, 43, 43);
+
+.navbar-default {
+    transition: 600ms ease;
+    background: transparent;
+    -webkit-transition: 600ms ease;
+    -moz-transition: 600ms ease;
+    -ms-transition: 600ms ease;
+    -o-transition: 600ms ease;
+}
+
+.navbar-default.scrolled {
+    background: #F5F5f5;
+}
+
+.navbar {
+    position: fixed;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
+    width: 100%;
+
+    .container {
+        .navbar-collapse {
+            .navbar-nav {
+                display: flex;
+
+                .nav-item {
+                    margin-bottom: 2px;
+
+                    &:hover {
+                        margin: 0px;
+                        border-bottom: $main-color 2px solid;
+                    }
+                }
+            }
+
+            .searchside {
+                position: relative;
+
+                input {
+                    border: 1px solid gray;
+                    width: 70px;
+                    transition: width 2s;
+                    border-radius: 6px;
+                    -webkit-border-radius: 6px;
+                    -moz-border-radius: 6px;
+                    -ms-border-radius: 6px;
+                    -o-border-radius: 6px;
+
+                    &:focus {
+                        width: 400px;
+                        outline: none;
+                        transition: width 2s;
+                        -webkit-transition: width 2s;
+                        -moz-transition: width 2s;
+                        -ms-transition: width 2s;
+                        -o-transition: width 2s;
+                    }
+
+                    // &:not(:focus) {
+                    //     +ul {
+                    //         display: none;
+                    //         transition: display 2s;
+                    //         -webkit-transition: display 2s;
+                    //         -moz-transition: display 2s;
+                    //         -ms-transition: display 2s;
+                    //         -o-transition: display 2s;
+                    //     }
+                    // }
+                }
+
+
+            }
+
+
+            .searchedList {
+                max-height: 250px;
+                overflow: auto;
+                position: absolute;
+                border: 1px gray solid;
+                background-color: white;
+                padding: 5px 0px;
+                border-bottom-left-radius: 20px;
+
+
+                li {
+                    word-wrap: break-word;
+                    height: 30px;
+                    overflow: hidden;
+
+                    &:hover {
+                        background-color: #dfdfdf;
+
+                        // a {
+                        //     color: white;
+                        // }
+                    }
+
+                    a {
+                        color: $main-color;
+                        display: block;
+                        height: 100%;
+                        width: 100%;
+                        padding: 5px 10px;
+                    }
+                }
+            }
+
+            .empty {
+                display: none;
+            }
+
+            .noEmpty {
+                display: block;
+            }
+        }
+
+    }
+
+}
+
+@media screen and (min-width: 650px) {
+    .navbar-collapse {
+        display: flex;
+        justify-content: space-between;
+    }
+}

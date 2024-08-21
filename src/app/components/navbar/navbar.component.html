@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-md navbar-default">
+    <div class="container">
+        <a class="navbar-brand">Logo</a>
+
+        <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">&#9776;</button>
+        <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse">
+
+            <ul class="navbar-nav">
+                <li class="nav-item"><a routerLink="" class="nav-link">Home</a></li>
+                <li class="nav-item"><a routerLink="jobseekers" class="nav-link">Jobseekers</a></li>
+                <li class="nav-item"><a routerLink="employers" class="nav-link">Employers</a></li>
+                <li class="nav-item"><a routerLink="aboutus" class="nav-link">About Us</a></li>
+            </ul>
+            <div class="searchside">
+                <input id="search-text" #srcInp type="text" [(ngModel)]="searchText" class="ps-2" placeholder="search">
+                <ul [ngClass]="searchText == '' ? 'empty' : 'noEmpty'" class="searchedList">
+                    <li *ngFor="let job of allJobs | filter: searchText"  (click)="deleteList()">
+                        <a [routerLink]="['jobseekers', job.id]">{{job.title}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>

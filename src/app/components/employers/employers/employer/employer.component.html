@@ -1,0 +1,42 @@
+<div class="employer-page">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-3 left-side">
+                <img src="assets/userPhoto.jpeg" alt="userPhoto" class="user-pic">
+                <h1>{{selectedUser?.username}}
+                    <hr>
+                    {{selectedUser?.email}}
+                </h1>
+                <a href="mailto:{{selectedUser?.email}}">Send Message</a>
+            </div>
+            <div class="col-12 col-md-5 center-side">
+                <h5>Name: {{selectedUser?.name | uppercase}}</h5>
+                <h5>Phone: {{selectedUser?.phone}}</h5>
+                <h5>Website: <b>{{selectedUser?.website}}</b></h5>
+                <hr>
+                <h5>Company Name: {{selectedUser?.company.name}}</h5>
+                <p>Catch Phrase: {{selectedUser?.company.catchPhrase}}</p>
+                <h5>bs: {{selectedUser?.company.catchPhrase}}</h5>
+            </div>
+            <div class="col-12 col-md-4 right-side">
+                <div right-top>
+                    <h4>Adress</h4>
+                    <hr>
+                    <div>
+                        <h5>Street: {{selectedUser?.address.street}}</h5>
+                        <h5>Suite: {{selectedUser?.address.suite}}</h5>
+                    </div>
+                    <div>
+                        <h5>City: {{selectedUser?.address.city}}</h5>
+                        <h5>Zipcode: {{selectedUser?.address.zipcode}}</h5>
+                    </div>
+                </div>
+                <div class="right-bottom">
+                    <div class="rb-linkedin"><a href="/">Linkedin</a></div>
+                    <div class="rb-facebook"><a href="/">Facebook</a></div>
+                    <div class="rb-instagram"><a href="/">Instagram</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+.we-component {
+    padding: 100px 0px;
+    .container {
+        .leftSide {
+            text-align: center;
+            h1 {
+                font-weight: bolder;
+            }
+        }
+        .rightSide {
+            img {
+                display: block;
+                margin: 20px auto;
+                width: 50%;
+                box-shadow: 1px 13px 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .leftSide {
+        p {
+            padding: 0px 15px;
+            text-align: justify;
+        }
+    }
+    .rightSide {
+        img {
+            width: 100% !important;
+        }
+    }
+}
