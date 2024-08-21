@@ -1,0 +1,15 @@
+<div class="jobseekers-component pages">
+    <div class="container">
+        <div class="works-list d-flex">
+            <div class="col-12 col-lg-3" *ngFor="let employer of allEmployers">
+                <a [routerLink]="[employer.id]">
+                    <img class="work-img" src="assets/userPhoto.jpeg" alt="img">
+                    <h5 class="p-0">{{employer.username}}</h5>
+                    <h5 class="work-title">{{employer.name}}</h5>
+                    <h4 class="work-title">{{employer.company.bs}}</h4>
+                    <p class="work-about">{{employer.company.catchPhrase}}</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,1 +1,10 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    text-decoration: none !important;
+    list-style: none;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+html, body {
+    height: 100%;
+}
